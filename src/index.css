@@ -1,10 +1,12 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(../assets/ProximaNova-Semibold.woff2) format('woff2');
+  font-weight: 400;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Proxima Nova',Arial,Tahoma,PingFangSC,sans-serif,"Segoe UI Emoji","Noto Emoji";
+  font-weight: 700;
 }
 
 code {
