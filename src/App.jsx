@@ -3,7 +3,9 @@ import './App.css'
 function App () {
   return (
     <div className='App'>
-      <p>This is TikTok baby</p>
+      <main>
+        This is TikTok my baby
+      </main>
     </div>
   )
 }

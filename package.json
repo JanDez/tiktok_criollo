@@ -2,6 +2,7 @@
   "name": "tiktok_criollo",
   "version": "0.0.0",
   "scripts": {
+    "co": "sui-mono commit", 
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
@@ -11,6 +12,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@s-ui/mono": "^2.18.0",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@vitejs/plugin-react": "^1.0.7",
@@ -19,6 +21,8 @@
     "vite": "^2.7.2"
   },
   "eslintConfig": {
-    "extends": ["./node_modules/standard/eslintrc.json"]
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
   }
 }
