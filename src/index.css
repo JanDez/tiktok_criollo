@@ -8,3 +8,9 @@ body {
   font-family: 'Proxima Nova',Arial,Tahoma,PingFangSC,sans-serif,"Segoe UI Emoji","Noto Emoji";
   font-weight: 700;
 }
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
