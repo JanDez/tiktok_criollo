@@ -6,7 +6,9 @@ video {
 button {
     width: 62px;
     height: 62px;
-    background-image: url(assets/PlayerButom.png);
+    border: none;
+    background-color: transparent;
+    background-image: url(../assets/PlayerButom.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
