@@ -13,5 +13,11 @@ const useVideoPlayer = () => {
 			isPlaying: !playerState.isPlaying,
 		})
   }
+  useEffect(() => {
+		playerState.isPlaying
+			? videoElement.current.play()
+			: videoElement.current.pause()
+  }, [playerState.isPlaying, videoElement])
+  
 
 export default useVideoPlayer
