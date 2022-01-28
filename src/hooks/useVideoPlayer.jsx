@@ -29,7 +29,7 @@ const useVideoPlayer = () => {
 			progress,
 		})
   }
-  
+
   const handleVideoProgress = (event) => {
 		const manualChange = Number(event.target.value)
 		videoElement.current.currentTime =
@@ -49,4 +49,16 @@ const useVideoPlayer = () => {
 		})
   }
 
+  const toggleMute = () => {
+		setPlayerState({
+			...playerState,
+			isMuted: !playerState.isMuted,
+		})
+  }
+
+  useEffect(() => {
+		playerState.isMuted
+			? (videoElement.current.muted = true)
+			: (videoElement.current.muted = false)
+  }, [playerState.isMuted, videoElement])
 export default useVideoPlayer
