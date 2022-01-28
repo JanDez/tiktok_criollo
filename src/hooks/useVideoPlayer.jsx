@@ -29,4 +29,13 @@ const useVideoPlayer = () => {
 			progress,
 		})
   }
+  const handleVideoProgress = (event) => {
+		const manualChange = Number(event.target.value)
+		videoElement.current.currentTime =
+			(videoElement.current.duration / 100) * manualChange
+		setPlayerState({
+			...playerState,
+			progress: manualChange,
+		})
+  }
 export default useVideoPlayer
