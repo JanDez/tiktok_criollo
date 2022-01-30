@@ -61,4 +61,14 @@ const useVideoPlayer = () => {
 			? (videoElement.current.muted = true)
 			: (videoElement.current.muted = false)
   }, [playerState.isMuted, videoElement])
+
+  return () => {
+		playerState,
+		togglePlay,
+		handleOnTimeUpdate,
+		handleVideoProgress,
+		handleVideoSpeed,
+		toggleMute,
+  }
+  
 export default useVideoPlayer
