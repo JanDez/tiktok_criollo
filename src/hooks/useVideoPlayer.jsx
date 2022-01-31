@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react'
 
 const useVideoPlayer = () => {
-  const [playerState, setPlayerState] = useState(false)
-  const [isPlaying, setisPlaying] = useState(false)
-  const [progress, setProgress] = useState(0)
-  const [speed, setSpeed] = useState(1)
-  const [muted, setMuted] = useState(false)
+  const [playerState, setPlayerState] = useState({
+    isPlaying: false,
+    progress: 0,
+    speed: 1,
+    isMuted: false
+  })
+
   const togglePlay = () => {
     setPlayerState({
       ...playerState,
-			isPlaying: !playerState.isPlaying,
+			isPlaying: !playerState.isPlaying
 		})
   }
   
@@ -25,7 +27,7 @@ const useVideoPlayer = () => {
     100
 		setPlayerState({
       ...playerState,
-			progress,
+			progress
 		})
   }
   
@@ -35,7 +37,7 @@ const useVideoPlayer = () => {
     (videoElement.current.duration / 100) * manualChange
 		setPlayerState({
       ...playerState,
-			progress: manualChange,
+			progress: manualChange
 		})
   }
   
@@ -44,14 +46,14 @@ const useVideoPlayer = () => {
 		videoElement.current.playbackRate = speed
 		setPlayerState({
       ...playerState,
-			speed,
+			speed
 		})
   }
   
   const toggleMute = () => {
     setPlayerState({
       ...playerState,
-			isMuted: !playerState.isMuted,
+			isMuted: !playerState.isMuted
 		})
   }
   
